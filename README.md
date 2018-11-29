@@ -21,7 +21,7 @@ This service will convert .tck files to .trk files using nipype.
 ### References 
 Gorgolewski K, Burns CD, Madison C, Clark D, Halchenko YO, Waskom ML, Ghosh SS. (2011). Nipype: a flexible, lightweight and extensible neuroimaging data processing framework in Python. Front. Neuroinform. 5:13.
 
-[1. MRTrix2TrackVis](https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/convert.html)
+[MRTrix2TrackVis](https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/convert.html)
 
 
 ## Running the App 
