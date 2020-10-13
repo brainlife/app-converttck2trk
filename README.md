@@ -2,8 +2,7 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.22-blue.svg)](https://doi.org/10.25663/bl.app.22)
 
 # app-converttck2trk
-
-This service will convert a .tck file (MRtrix format) to a .trk file in dwi space using nipype. 
+This service will convert a .tck file (MRtrix format) to a .trk file (TrackVis format) in diffusion-weighted imagimg (dwi) space using nipype. 
 
 ### Authors
 - Lindsey Kitchell (kitchell@indiana.edu)
@@ -23,21 +22,25 @@ brainlife.io is publicly funded and for the sustainability of the project it is 
 ### References 
 [1. MRTrix2TrackVis](https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.mrtrix/convert.html)
 
-### Citation
-We kindly ask that you cite the following article when publishing papers and code using this code. 
+### Citations
+We kindly ask that you cite the following articles when publishing papers and code using this code. 
 
-Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+1. Tournier, J.‐D., Calamante, F. and Connelly, A. (2012), MRtrix: Diffusion tractography in crossing fiber regions. Int. J. Imaging Syst. Technol., 22: 53-66. [https://doi.org/10.1002/ima.22005](https://doi.org/10.1002/ima.22005)
 
-## Running the App 
+2. Avesani, P., McPherson, B., Hayashi, S. et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [https://doi.org/10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-### On Brainlife.io
-
+## Running the app
+### On [Brainlife.io](http://brainlife.io/) 
 You can submit this App online at [https://doi.org/10.25663/bl.app.22](https://doi.org/10.25663/bl.app.22) via the "Execute" tab.
 
+Inputs: \
+The .tck file to be converted, and the dwi image to use as the reference space.
+
+Ouput: \
+The .trk file in dwi space.
+
 ### Running Locally (on your machine)
-
 1. git clone this repo.
-
 2. Inside the cloned directory, create `config.json` with something like the following content with paths to your input files.
 
 ```json
@@ -46,28 +49,20 @@ You can submit this App online at [https://doi.org/10.25663/bl.app.22](https://d
 	"dwi": "./input/dtiinit/dwi.nii.gz"
 }
 ```
-
-If you have singularity installed on your local machine:
-
 3. Launch the App by executing `main`
 
 ```bash
 ./main
 ```
 
-Otherwise:
-
-3. Ensure you have the proper dependencies installed for python and execute main.py directly. 
-
-## Output
-
+### Output
 The main output of this App is a file called `track.trk`. 
 
 
 ### Dependencies
-
 This App only requires [singularity](https://www.sylabs.io/singularity/) to run. If you don't have singularity, you will need to install following dependencies.  
 
   - NIPYPE: https://nipype.readthedocs.io/en/latest/
   - H5PY: https://www.h5py.org/
-
+  
+#### MIT Copyright (c) 2020 brainlife.io The University of Texas at Austin and Indiana University
